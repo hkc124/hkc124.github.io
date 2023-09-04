@@ -17,18 +17,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="欢迎来到我的博客空间，这应该是我严格意义的第一篇博客，尽管之前也试过用WordPress直接在服务器上搭建博客，但我个人不太喜欢那种搭建方式，所以并没有生产内容，所以这应该是我第一篇有内容的博客了。  本篇博客主要围绕着搭建博客空间所用到的一些知识和程序进行梳理。目前我对于博客的Markdown的使用还不太熟悉，需要一段学习时间，所以你可以看到我的格式会比较稚嫩。 所部署的软件与技术1.git">
+    <meta name="description" content="博客项目搭建相关心得">
 <meta property="og:type" content="article">
 <meta property="og:title" content="blog搭建">
 <meta property="og:url" content="http://example.com/2023/08/31/blog%E6%90%AD%E5%BB%BA/index.html">
 <meta property="og:site_name" content="CKHacker">
-<meta property="og:description" content="欢迎来到我的博客空间，这应该是我严格意义的第一篇博客，尽管之前也试过用WordPress直接在服务器上搭建博客，但我个人不太喜欢那种搭建方式，所以并没有生产内容，所以这应该是我第一篇有内容的博客了。  本篇博客主要围绕着搭建博客空间所用到的一些知识和程序进行梳理。目前我对于博客的Markdown的使用还不太熟悉，需要一段学习时间，所以你可以看到我的格式会比较稚嫩。 所部署的软件与技术1.git">
+<meta property="og:description" content="博客项目搭建相关心得">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-31T12:25:12.000Z">
-<meta property="article:modified_time" content="2023-09-03T14:28:21.331Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2023-09-04T13:21:38.353Z">
+<meta property="article:author" content="CKHacker">
+<meta property="article:tag" content="开发心得">
 <meta name="twitter:card" content="summary">
 
 
@@ -62,6 +63,9 @@
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -82,6 +86,10 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+  </ul>
+</nav>
 
 
 
@@ -104,13 +112,15 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%80%E9%83%A8%E7%BD%B2%E7%9A%84%E8%BD%AF%E4%BB%B6%E4%B8%8E%E6%8A%80%E6%9C%AF"><span class="nav-number">1.</span> <span class="nav-text">所部署的软件与技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E7%90%86%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text">git的使用和理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo"><span class="nav-number">3.</span> <span class="nav-text">hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#node-js"><span class="nav-number">4.</span> <span class="nav-text">node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSH"><span class="nav-number">5.</span> <span class="nav-text">SSH</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#github"><span class="nav-number">6.</span> <span class="nav-text">github</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%80%E9%83%A8%E7%BD%B2%E7%9A%84%E8%BD%AF%E4%BB%B6%E4%B8%8E%E6%8A%80%E6%9C%AF"><span class="nav-number">1.</span> <span class="nav-text">所部署的软件与技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E7%90%86%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text">git的使用和理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo"><span class="nav-number">3.</span> <span class="nav-text">hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#node-js"><span class="nav-number">4.</span> <span class="nav-text">node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSH"><span class="nav-number">5.</span> <span class="nav-text">SSH</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#github"><span class="nav-number">6.</span> <span class="nav-text">github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E9%A2%98%E7%A7%81%E4%BA%BA%E8%AE%A2%E5%88%B6%EF%BC%88Next%EF%BC%89"><span class="nav-number">7.</span> <span class="nav-text">主题私人订制（Next）</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
+    <img class="site-author-image" itemprop="image" alt="CKHacker"
+      src="/images%5C%E4%B8%80%E9%A2%97%E5%B0%8F%E5%88%AB%E8%87%B4.jpg">
+  <p class="site-author-name" itemprop="name">CKHacker</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap animated">
@@ -120,6 +130,16 @@
           <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -148,8 +168,8 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/31/blog%E6%90%AD%E5%BB%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="image" content="/images%5C%E4%B8%80%E9%A2%97%E5%B0%8F%E5%88%AB%E8%87%B4.jpg">
+      <meta itemprop="name" content="CKHacker">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -159,7 +179,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="blog搭建 | CKHacker">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="博客项目搭建相关心得">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -181,19 +201,36 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-09-03 22:28:21" itemprop="dateModified" datetime="2023-09-03T22:28:21+08:00">2023-09-03</time>
+      <time title="修改时间：2023-09-04 21:21:38" itemprop="dateModified" datetime="2023-09-04T21:21:38+08:00">2023-09-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">开发</span></a>
+        </span>
     </span>
 
   
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
 </div>
 
+            <div class="post-description">博客项目搭建相关心得</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>  欢迎来到我的博客空间，这应该是我严格意义的第一篇博客，尽管之前也试过用WordPress直接在服务器上搭建博客，但我个人不太喜欢<br>那种搭建方式，所以并没有生产内容，所以这应该是我第一篇有内容的博客了。<br>  本篇博客主要围绕着搭建博客空间所用到的一些知识和程序进行梳理。目前我对于博客的Markdown的使用还不太熟悉，需要一段学习时间，所以你可以看到我的格式会比较稚嫩。</p>
+    <div class="post-body" itemprop="articleBody"><p>  欢迎来到我的博客空间，这应该是我严格意义的第一篇技术博客，尽管之前也试过用WordPress直接在服务器上搭建博客，但我个人不太喜欢<br>那种搭建方式，所以并没有生产内容，所以这应该是我第一篇有内容的博客了。<br>  本篇博客主要围绕着搭建博客空间所用到的一些知识和程序进行梳理。目前我对于博客的Markdown的使用还不太熟悉，需要一段学习时间，所以你可以看到我的格式会比较稚嫩。</p>
 <h3 id="所部署的软件与技术"><a href="#所部署的软件与技术" class="headerlink" title="所部署的软件与技术"></a>所部署的软件与技术</h3><p>1.git:版本管理工具<br>2.node.js(目前作用未知)<br>3.hexo:静态博客生成工具<br>4.SSH（Secure Shell）：用于远程登陆到服务器执行远程命令<br>5.github:作为代码托管平台</p>
 <hr>
 <h3 id="git的使用和理解"><a href="#git的使用和理解" class="headerlink" title="git的使用和理解"></a>git的使用和理解</h3><p>对于<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1FE411P7B3/?spm_id_from=333.337.search-card.all.click&vd_source=3a8ca68883e863b6123050ceb694dd3b">git</a>我的使用理解并不深，目前来看就是对可以用程序化的语言对文件进行管理，但它所谓的版本控制性目前我还未进行掌握。</p>
@@ -201,6 +238,9 @@
 <h3 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h3><p>目前没有更进一步的想法</p>
 <h3 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h3><p>应该涉及到计算机网络的知识，可以去简单的弄清原理</p>
 <h3 id="github"><a href="#github" class="headerlink" title="github"></a>github</h3><p>github的使用目前我还是不太熟悉，我希望多接触几个项目，慢慢认识这个平台。</p>
+<h3 id="主题私人订制（Next）"><a href="#主题私人订制（Next）" class="headerlink" title="主题私人订制（Next）"></a>主题私人订制（Next）</h3><p>1.框架定制：<a target="_blank" rel="noopener" href="https://blog.csdn.net/wyll19980812/article/details/107016680?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169382771716777224470753%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=169382771716777224470753&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-107016680-null-null.142%5Ev93%5EchatgptT3_1&utm_term=hexo%20next%E4%B8%BB%E9%A2%98%E5%A4%B4%E5%83%8F&spm=1018.2226.3001.4187">next定制</a></p>
+<hr>
+<p>经过几小时的个人定制摸索，我决定更换主题，这个主题不够丰富多彩，简称逼格不够高，那个butterfly主题感觉还是逼格满满的，而且也是目前比较火的。</p>
 
     </div>
 
@@ -209,6 +249,9 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%BC%80%E5%8F%91%E5%BF%83%E5%BE%97/" rel="tag"># 开发心得</a>
+          </div>
 
         
 
@@ -245,21 +288,33 @@
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>
-    <span class="author" itemprop="copyrightHolder">John Doe</span>
+    <span class="author" itemprop="copyrightHolder">CKHacker</span>
   </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
     </div>
   </footer>
 
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-  <div class="sidebar-dimmer"></div>
   <div class="back-to-top" role="button" aria-label="返回顶部">
     <i class="fa fa-arrow-up fa-lg"></i>
     <span>0%</span>
@@ -271,8 +326,9 @@
 
 
   
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
 
@@ -282,6 +338,7 @@
 
 
   
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
