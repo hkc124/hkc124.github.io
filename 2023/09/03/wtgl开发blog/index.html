@@ -1,351 +1,279 @@
 <!DOCTYPE html>
-<html lang="zh-cmn-Hans">
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <link rel="shortcut icon" href="http://some.url/to/favicon.ico">
-    <title>wtgl开发blog-Adagio</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
-    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/academicons/1.8.6/css/academicons.min.css">
-    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.9.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.13.11/katex.min.css">
-    
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-    
-<link rel="stylesheet" href="/css/adagio.css">
+<link rel="stylesheet" href="/css/main.css">
 
-<meta name="generator" content="Hexo 6.3.0"></head>
-<body>
-    <div class="container-fluid">
-    <nav class="nav">
-        <div class="collapse navbar-collapse" id="navbar-sm">
-            
-            
-            <div class="navbar-nav">
-                <a target="_blank" rel="noopener" href="https://hexo.io" class="nav-item nav-link">Hexo</a>
-            </div>
-            
-            <div class="navbar-nav">
-                <a target="_blank" rel="noopener" href="http://www.hanlindong.com" class="nav-item nav-link">Adagio's author</a>
-            </div>
-            
-        </div>
-    </nav>
-</div>
 
-<div class="d-flex d-md-none" style="width: 100%; background-color: #e9ecef">
-    
-    <div class="nav">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-sm"
-            aria-expanded="false" aria-label="Toggle Navigation">
-            <i class="fas fa-bars fa-lg"></i>
-        </button>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="这是一篇介绍梧桐故里开发的blog，这算是我第一次多人合作进行项目，积累了一定的多人合作经验，目前而言经验都是来于教训，总体而言开发过程比较痛苦，但这也让我对多人开发项目制定相关规范性产生了更深的体会。目前还没有开发完成，但剩下的都是重复性的工作了，所以可以先把开发的blog写下来。  梧桐故里项目介绍梧桐故里项目是基于WebGal引擎开发的文字交互游戏，具体的技术并不难，主要是面向惠州中学毕业高">
+<meta property="og:type" content="article">
+<meta property="og:title" content="wtgl开发blog">
+<meta property="og:url" content="http://example.com/2023/09/03/wtgl%E5%BC%80%E5%8F%91blog/index.html">
+<meta property="og:site_name" content="CKHacker">
+<meta property="og:description" content="这是一篇介绍梧桐故里开发的blog，这算是我第一次多人合作进行项目，积累了一定的多人合作经验，目前而言经验都是来于教训，总体而言开发过程比较痛苦，但这也让我对多人开发项目制定相关规范性产生了更深的体会。目前还没有开发完成，但剩下的都是重复性的工作了，所以可以先把开发的blog写下来。  梧桐故里项目介绍梧桐故里项目是基于WebGal引擎开发的文字交互游戏，具体的技术并不难，主要是面向惠州中学毕业高">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-09-03T13:26:37.000Z">
+<meta property="article:modified_time" content="2023-09-03T14:07:28.327Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2023/09/03/wtgl%E5%BC%80%E5%8F%91blog/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/09/03/wtgl%E5%BC%80%E5%8F%91blog/","path":"2023/09/03/wtgl开发blog/","title":"wtgl开发blog"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>wtgl开发blog | CKHacker</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
     </div>
-    
-    <nav class="navbar ml-auto">
-        <a class="navbar-brand" href="/">
-            
-            Adagio
-            
-        </a>
-    </nav>
-</div>
+  </div>
 
+  <div class="site-meta">
 
-<div class="container d-none d-md-block my-navbar">
-    <nav class="navbar navbar-expand-sm navbar-light bg-transparent">
-        <a class="navbar-brand " href="/">
-            
-            Adagio
-            
-        </a>
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                
-                <li class="nav-item pl-2 pr-2 ">
-                    <a class="nav-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
-                </li>
-                
-                <li class="nav-item pl-2 pr-2 ">
-                    <a class="nav-link" target="_blank" rel="noopener" href="http://www.hanlindong.com">Adagio's author</a>
-                </li>
-                
-            </ul>
-        </div>
-        
-    </nav>
-</div>
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">CKHacker</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
 
-
-
-
-    <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        
-        <h1 class="mt-4 article-title page-title">wtgl开发blog</h1>
-        
-        <p class="lead text-gray mt-3">By Anonymous; Published on 2023-09-03</p>
-        
-        <div class="tags">
-            <ul class="tag-list">
-                
-            </ul>
-        </div>
-        
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
     </div>
+  </div>
 </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9 pt-2">
-                <div class="row">
-                    <div class="col-12">
-                        <main>
-                            <article class="article-text page-content"><p>这是一篇介绍梧桐故里开发的blog，这算是我第一次多人合作进行项目，积累了一定的多人合作经验，目前而言经验都是来于教训，总体而言开发过程比较痛苦，但这也让我对多人开发项目制定相关规范性产生了更深的体会。目前还没有开发完成，但剩下的都是重复性的工作了，所以可以先把开发的blog写下来。</p>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A2%A7%E6%A1%90%E6%95%85%E9%87%8C%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">梧桐故里项目介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A2%A7%E6%A1%90%E6%95%85%E9%87%8C%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E6%B8%A0%E9%81%93"><span class="nav-number">2.</span> <span class="nav-text">梧桐故里项目部署渠道</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%E7%9A%84%E6%94%B6%E8%8E%B7"><span class="nav-number">3.</span> <span class="nav-text">开发过程的收获</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/03/wtgl%E5%BC%80%E5%8F%91blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CKHacker">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="wtgl开发blog | CKHacker">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          wtgl开发blog
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-09-03 21:26:37 / 修改时间：22:07:28" itemprop="dateCreated datePublished" datetime="2023-09-03T21:26:37+08:00">2023-09-03</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>这是一篇介绍梧桐故里开发的blog，这算是我第一次多人合作进行项目，积累了一定的多人合作经验，目前而言经验都是来于教训，总体而言开发过程比较痛苦，但这也让我对多人开发项目制定相关规范性产生了更深的体会。目前还没有开发完成，但剩下的都是重复性的工作了，所以可以先把开发的blog写下来。</p>
 <hr>
 <h3 id="梧桐故里项目介绍"><a href="#梧桐故里项目介绍" class="headerlink" title="梧桐故里项目介绍"></a>梧桐故里项目介绍</h3><p>梧桐故里项目是基于WebGal引擎开发的文字交互游戏，具体的技术并不难，主要是面向惠州中学毕业高中生所开发的游戏，以具有代表性的惠中生活为剧情，勾起惠中高中生对于母校的思念之情。</p>
 <h3 id="梧桐故里项目部署渠道"><a href="#梧桐故里项目部署渠道" class="headerlink" title="梧桐故里项目部署渠道"></a>梧桐故里项目部署渠道</h3><p>因为该引擎有文件导出功能，支持三种渠道的部署<br>1.Windows端部署:inno setup compiler实现<br>2.Android端部署：Android Studio实现<br>3.网页端部署：运用宝塔平台实现</p>
 <h3 id="开发过程的收获"><a href="#开发过程的收获" class="headerlink" title="开发过程的收获"></a>开发过程的收获</h3><p>1.每使用一个全新软件，都需要去访问它的官方文档，里面有着全面的诠释和使用方法<br>2.进行多人开发时，要根据自我开发的需求提交自己的开发意见，以减少工作量，本次多人合作开发，资料非常的乱，文本不根据框架走，文本内部结构不统一规范等等，使得开发难度大大提升，造成了许许多多的困难和挑战。<br>3.csdn的认识，在未进行开发之前，我对于csdn的用法其实还不太熟悉，但当面对着许许多多的困难时，我终于意识到csdn平台的重要性，在这之前，我只会跟着B站的教程走，或许这也是进步吧。</p>
-</article>
-                        </main>
-                        
-                        
-                        
-                    </div>
-                </div>
-                <div class="row mt-5 mb-5">
-                    <div class="col-12">
-                        <div class="row">
-    <div class="col">
-        <nav aria-label="paginator" class="paginator">
-            <ul class="pagination d-none d-md-flex pagination-lg justify-content-center">
-                <li class="page-item  disabled ">
-                    <a class="page-link"
-                        href=""
-                        aria-label="Previous">
-                        <span aria-hidden="true">&laquo;
-                            No more</span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                <li class="page-item ">
-                    <a class="page-link"
-                        href="/2023/08/31/blog%E6%90%AD%E5%BB%BA/"
-                        aria-label="Next">
-                        <span
-                            aria-hidden="true">blog搭建
-                            &raquo;</span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </li>
-            </ul>
-            <ul class="pagination d-md-none justify-content-center">
-                <li class="page-item  disabled ">
-                    <a class="page-link"
-                        href=""
-                        aria-label="Previous">
-                        <span aria-hidden="true">&laquo;
-                            No more</span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                <li class="page-item ">
-                    <a class="page-link"
-                        href="/2023/08/31/blog%E6%90%AD%E5%BB%BA/"
-                        aria-label="Next">
-                        <span
-                            aria-hidden="true">blog搭建
-                            &raquo;</span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+
     </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/08/31/blog%E6%90%AD%E5%BB%BA/" rel="prev" title="blog搭建">
+                  <i class="fa fa-angle-left"></i> blog搭建
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
 </div>
 
 
 
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div id="vcomment"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="container pt-4 page-sidebar">
-                    
-                    <div class="row">
-    <div class="col">
-        <h6>APPLAUSE FOR ME</h6>
-        <div id="applause-easy"></div>
-    </div>
+
+
+
 </div>
-                    
-                    <hr class="row">
-                    <div class="row toc-container">
-                        <div class="col-12">
-                            <h6>NAVIGATION</h6>
-                            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A2%A7%E6%A1%90%E6%95%85%E9%87%8C%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D"><span class="toc-text">梧桐故里项目介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A2%A7%E6%A1%90%E6%95%85%E9%87%8C%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E6%B8%A0%E9%81%93"><span class="toc-text">梧桐故里项目部署渠道</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%E7%9A%84%E6%94%B6%E8%8E%B7"><span class="toc-text">开发过程的收获</span></a></li></ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
     </div>
-    <footer>
-    <div class="jumbotron jumbotron-fluid mb-0">
-        <div class="container-fluid">
-            <div class="col text-center">
-                <div class="bottom-social">
-                    <div class="row">
-    <div class="col text-center">
-        <ul class="list-inline">
-            
-            <li class="list-inline-item">
-                
-                <a target="_blank" rel="noopener" href="https://github.com/xxxxx">
-                    <span class="fa-stack fa-2x icon-link">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-                
-            </li>
-            
-            <li class="list-inline-item">
-                
-                <a target="_blank" rel="noopener" href="https://www.facebook.com/xxxxx">
-                    <span class="fa-stack fa-2x icon-link">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-                
-            </li>
-            
-            <li class="list-inline-item">
-                
-                <a target="_blank" rel="noopener" href="https://www.pinterest.com/xxxxx">
-                    <span class="fa-stack fa-2x icon-link">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-pinterest-p fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-                
-            </li>
-            
-            <li class="list-inline-item">
-                
-                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/xxxxx">
-                    <span class="fa-stack fa-2x icon-link">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
-                    </span>
-                </a>
-                
-            </li>
-            
-        </ul>
-    </div>
-</div>
+  </footer>
 
-                </div>
-                <p class="copyright text-muted">
-                    Copyright &copy; 
-                    <br>
-                    Theme: <a target="_blank" rel="noopener" href="https://github.com/Hanlin-Dong/hexo-theme-adagio">Adagio</a> - A <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> theme made with love by <a target="_blank" rel="noopener" href="http://www.hanlindong.com">Hanlin Dong</a>.
-                    <br>
-                    Thanks for coming!
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
 
-    
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.9.0/js/all.min.js"></script>
-     
-    <script defer src="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.13.11/katex.min.js"></script>
-    <script defer src="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.13.11/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
-    
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
 
 
 
-<script src="/js/av.min.js"></script>
-
-
-<script src="/js/valine.min.js"></script>
-
-
-<script src="/js/applause-easy.js"></script>
-
-<script>
-$(document).ready(function() {
-    new ApplauseEasy({
-        id: 'applause-easy',
-        appId: "xxxxxxxxxx",
-        appKey: "xxxxxxxxxx",
-        img_src: "http://img.hanlindong.com/blog/site/clap.png",
-        img_width: "50px",
-        img_height: "50px",
-        trigger_every: 20,
-        trigger_fun: () => {alert("Thanks!");}
-    })
-})
-</script>
-
-<script src="/js/adagio.js"></script>
 
 
 
-<script>
-    var _hmt = _hmt || [];
-    (function () {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?123456789";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+  
 
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-11111111-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-11111111-1');
-</script>
 
 
-    
-    <script>
-    new Valine({
-        el: "#vcomment",
-        appId: "xxxxxxxxxx",
-        appKey: "xxxxxxxxxx",
-        notify: false,
-        varify: false,
-        avatar: 'identicon',
-        placeholder: "",
-        recordIP: true
-    })
-</script>
-    
 </body>
 </html>
